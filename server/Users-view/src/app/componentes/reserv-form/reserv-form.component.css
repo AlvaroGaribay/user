@@ -1,0 +1,36 @@
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+input {
+    border-radius:5px;
+    height: 35px;
+    width: 90%;
+    font-style: italic;
+}
+.card1 {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 45px;
+    margin: -192% 0 0 -30%;
+    justify-content: space-between;
+}
+
+.btn {
+    margin: 6% 0 0 68%;
+    border-radius: 5px;
+    width: 28%;
+    height: 10%;
+    padding: 2px 15px 25px 15px;
+    /* arriba, izquierda, abajo, derecha  */
+    font-size: 12px;
+}
+
+h1 {
+    position: absolute;
+    margin-top: -192%;
+    margin-left: 10%;
+    font-size: 25px;
+}

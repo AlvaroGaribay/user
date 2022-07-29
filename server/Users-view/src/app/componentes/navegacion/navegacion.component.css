@@ -1,0 +1,23 @@
+.toolbar {
+    height: 100%;
+}
+
+.nav-tabs{
+    background-color: rgba(44,51,61,255);
+}
+
+.nav-tabs>.tab-content{
+    color:#fff;
+    padding:5px
+}
+
+.toolbar >.nav-tabs > a{
+    color: gray;
+}
+
+.toolbar > .nav-tabs > a:focus{
+    background-color: #303136 !important;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border: medium none;
+}

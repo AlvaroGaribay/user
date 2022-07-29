@@ -1,0 +1,41 @@
+<div class="col-6">
+    <h1>Ficha de reserva</h1>
+    <div class="card1">
+            <form>
+                <div class="form-group">
+                    <p>Nombre</p>
+                    <input type="text" name="nombre" [(ngModel)]="reserv.nombre" placeholder="Ingresa el nombre" class="form-control" autofocus>
+                </div>
+                <div>
+                    <p>Apellido</p>
+                    <input name="apellido_pat" [(ngModel)]="reserv.apellido_pat" placeholder="Ingresa un apellido" rows="2" class="form-control">
+                </div>
+                <div class="form-group">
+                    <p>Numero de Habitacion</p>
+                    <input name="habitacion" [(ngModel)]="reserv.habitacion" rows="2" class="form-control">
+                </div>
+                <div class="form-group">
+                    <p>Personas</p>
+                    <input type="number" id ="personas" name="personas" [(ngModel)]="reserv.personas" rows="2" class="form-control" oninput="multiplicar();">
+                </div>
+                <div class="form-group">
+                    <p>Numero de Telefono</p>
+                    <input name="telefono" [(ngModel)]="reserv.telefono" placeholder="Telefono de contacto" rows="2" class="form-control">
+                </div>
+                <div class="form-group">
+                    <p>Tipo de Habitacion</p>
+                    <select name="habitacionlista" id="habitacion" [(ngModel)]="reserv.t_habitacion" class="form-control">
+                        <option value="matrimonial">Matrimonial</option>
+                        <option value="individual">Individual</option>
+                        <option value="Doble">Habitacion Doble</option>
+                    </select>
+                </div>
+                <div class="form-group" oninput="multiplicar();">
+                    <p>Precio</p>
+                    <input name="precio" type="number" id="precio" [(ngModel)]="reserv.precio" class="form-control">
+
+                </div>
+            </form>
+    </div>
+    <button class="btn btn-info"(click)="edit ? updateReserv() : saveNewReserv()">Guardar</button>
+</div>

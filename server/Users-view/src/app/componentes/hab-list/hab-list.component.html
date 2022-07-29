@@ -1,0 +1,27 @@
+<div class="col-md-3" *ngFor="let hab of habs" >
+    <div class="card text-center" style="margin-top: -450%; margin-left: -80%; margin-right: 80%;">
+        <div class="card-header text-white d-flex" [ngStyle]="{'background-color': (hab.estado == 'En servicio') ? '#439f36' : ((hab.estado == 'En limpieza') ? '#0802d1':'#ca0803')}">
+            {{ hab.id }}
+            <div class="buttons" style="margin-top: -.6%;">
+                <button class="btn btn-danger" (click)="deleteHab(hab.id)" style="border-radius: 50%; padding: 1px 8px;">
+                    <i class="far fa-trash-alt"></i>
+                </button>
+               <button [routerLink]="['/habitaciones/edit', hab.id]" class="btn btn-info btn-block" class="btn btn-info" style="border-radius: 50%;padding: 1px 8px;">
+                   <i class="fa fa-pen"></i>
+               </button>
+               </div>
+        </div>
+        <img [src]="hab.image" alt="" class="card-img-top">
+        <div class="card-body">
+            <p>{{ hab.estado }}</p>
+        </div>
+    </div>
+</div>
+
+<div class="newNote">
+    <button type="button" routerLink="habitaciones/add" class="btn btn-outline-primary" style="margin: -80% 0 0 88%; width: 155px; height: 245px;">
+      <i class="fa fa-plus" aria-hidden="true"></i>
+      <p>Crear notas</p>
+    </button>
+  </div>
+  

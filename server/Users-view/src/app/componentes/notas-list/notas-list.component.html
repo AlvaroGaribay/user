@@ -1,0 +1,26 @@
+<div class="col-md-4" *ngFor="let note of notes">
+    <div class="card text-center" style="margin: -258% -18% 0% 30%; position: sticky;">
+        <div class="card-header bg-dark text-white d-flex">
+            {{ note.title }}
+            <div class="buttons" style="margin-top: -.6%;">
+             <button class="btn btn-danger" (click)="deleteNote(note.id)" style="border-radius: 50%; padding: 1px 8px;">
+                <i class="far fa-trash-alt"></i>
+            </button>
+            <button [routerLink]="['/notes/edit', note.id]" class="btn btn-info" style="border-radius: 50%;padding: 1px 8px;">
+                <i class="fa fa-pen"></i>
+            </button>
+            </div>
+        </div>
+        <img [src]="note.image" alt="" class="card-img-top">
+        <div class="card-body">
+            <p>{{ note.description }}</p>
+        </div>
+    </div>
+</div>
+
+<div class="newNote" style="position: fixed;">
+    <button type="button" routerLink="notes/add" class="btn btn-outline-primary" style="margin: -550% 0 0 800%; width: 155px; height: 245px;">
+      <i class="fa fa-plus" aria-hidden="true"></i>
+      <p>Crear notas</p>
+    </button>
+  </div>

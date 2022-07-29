@@ -1,0 +1,38 @@
+<div class="int">
+  <table class="table" *ngFor="let reserv of reservs">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Habitacion</th>
+        <th scope="col">Personas</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Fecha</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">{{ reserv.id }}</th>
+        <td>{{ reserv.nombre }}</td>
+        <td>{{ reserv.apellido_pat }}</td>
+        <td>{{ reserv.habitacion }}</td>
+        <td>{{ reserv.personas }}</td>
+        <td>{{ reserv.precio }}</td>
+        <td>{{ reserv.telefono }}</td>
+        <td>{{ reserv.created_at }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteReserv(reserv.id)">
+            <i class="far fa-trash-alt"></i>
+          </button>
+        </td>
+        <td>
+          <button [routerLink]="['/huesped/edit', reserv.id]" class="btn btn-info btn-block">
+            <i class="fa fa-pen"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
